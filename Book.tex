@@ -1,0 +1,107 @@
+%CODIGO FUENTE TRABAJO ESCRITO : ESTILO LIBRO
+%PROYECTO FINAL DE MATEMATICAS DISCRETAS
+%UNIVERSIDAD NACIONAL DE COLOMBIA
+%JUAN CAMILO NEIVA
+%DAVID RICARDO DAGER MORA
+%MANUEL ARTURO RAMIREZ PIZCO
+%CIRO IVAN GARCIA LOPEZ
+%PRESENTADO A: ANDRES VILLAVECES NIÃ‘O
+
+%TIPO DE DOCUMENTO, PAQUETES ADICIONALES
+\documentclass[a4paper,10pt]{article}
+\usepackage{eso-pic}
+\usepackage{graphicx} 
+\usepackage{anysize}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%SIRVE PARA GENERAR AUTOMATICAMENTE LAS ENUMERACIONES EN DEFINICIONES
+\newtheorem{defi}{\it DEFINICI\'ON}
+\newtheorem{algo}{\it ALGORITMO}
+\newtheorem{insig}{\it INSIGNIA}
+%TITULO DEL DOCUMENTO
+\title
+{
+  \textbf{Proyecto Final de Matem\'aticas Discretas \\ 
+  Fractales Aplicados a la criptograf\'ia \\ 
+  Grupo: K-ON}
+}
+
+%DATOS SOBRE LOS AUTORES
+\author
+{
+  \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+  \textbf{David Ricardo Dager} \\ 
+  \textbf{Manuel Arturo Ram\'irez} \\ 
+  \textbf{Ciro Iv\'an Garc\'ia} \\ \\ \\
+  \textbf{Presentado a: Andres Villaveces Ni\~no} \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+  \textbf{Universidad Nacional de Colombia} \\
+  \textbf{Facultad de Ingenier\'i­a} \\ 
+  \textbf{Departamento de Ingenier\'i­a de Sistemas e Industrial}
+}
+
+%MODIFICADORES DEL DOCUMENTO
+%NO GENERA FECHA
+%\date{}
+
+%MARGENES
+\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
+
+
+
+%RUTINA PARA PONER LA IMAGEN DE FONDO DE LA PRIMERA PAGINA 
+\newcommand{\BackgroundImage}[1]{
+  \AddToShipoutPicture*{
+    \put(0,0){
+      \parbox[b][\paperheight]{\paperwidth}{
+	\vfill
+	\centering
+	\includegraphics[width=15cm,height=15cm,
+	keepaspectratio]{#1.png}
+	\vfill
+      }
+    }
+  }
+}
+
+%RUTINA PARA INSERTAR IMAGENES AL TRABAJO
+%RECIBE
+%RUTA DE LA IMAGEN
+%NOMBRE DE LA IMAGEN
+%REFERENCIA DE LA IMAGEN <-- PARA PODER NOMBRARLA 
+\newcommand{\IncludeImage}[4]{
+  \begin{figure}[ht!]
+    \centering
+      \includegraphics[width=#2mm]{#1.png}
+      %\caption{#3}
+      %\label{#4}
+  \end{figure}
+}
+
+
+\begin{document}
+  %PONE LA IMAGEN DE FONDO
+  \BackgroundImage{escudo_un}    
+  \maketitle
+  \newpage
+
+  %GENERA LA TABLA DE CONTENIDOS
+  \tableofcontents
+  %\newpage
+
+  %modulos del proyecto
+  \input{./mod/introd.tex}
+  \input{./mod/fractales.tex}
+  \input{./mod/desarrollo.tex}
+  \input{./mod/algo.tex}
+  \input{./mod/encrip.tex}
+  \input{./mod/transmit.tex}
+  \input{./mod/reverse.tex}
+  \input{./mod/summary.tex}
+  %BIBLIOGRAFIA
+  %\newpage
+  \bibliographystyle{alpha}
+  \bibliography{./mod/biblio}
+  \nocite{*}
+  
+\end{document}

@@ -1,0 +1,84 @@
+\section{Matriz de cifrado y funci\'on de encriptaci\'on $f_{encryp}$}
+
+En la secci\'on 4 se menciono la matriz de cifrado y la funci\'on $f_{encryp}$; en la presente secci\'on buscamos presentar al m\'aximo de detalles estos dos componentes del trabajo, empezaremos hablando de la matriz de cifrado y su papel dentro del trabajo.
+
+\begin{defi} Matriz de Cifrado($\Psi$): 
+	Es una matriz de tama\~no 8$\times$8 la cual almacena todos los car\'acteres de $\Omega$.
+\end{defi}
+
+\begin{defi} Transformaci\'on discreta de Baker\footnote{Algunos autores tambi\'en se refieren como Permutaciones de Bernoulli.}.
+
+Sea N en conjunto N=\{0,1,2..,n-1\} de n\'umeros enteros y sea $\lambda$ un conjunto de enteros, $\lambda$=$\{\lambda_{1}, \lambda_{2},...,\lambda_{k}\}$, que satisface las siguientes propiedades:
+
+\begin{itemize}
+	\item $\lambda_{1}+\lambda_{2}+...+\lambda_{k}$=n.
+	\item $\lambda_{i}\mid n$ $\forall$ i $\epsilon$ \{1,2,...,k\}
+\end{itemize}
+
+Definimos la transformaci\'on discreta de Baker $T_{N,\lambda}$ : N $\times$ N $\longmapsto$ N $\times$ N de la siguiente manera:
+
+\begin{equation}
+  T_{N,\lambda}(x,y) = [q_{i}(x-\sigma_{i}) + y \ mod \ q_{i} , \frac{1}{q_{i}}(y - y \ mod \ q_{s} ) + \sigma_{i}
+\end{equation}
+
+De donde $\sigma_{1}$ := 0 y $\sigma_{i}$ := $\lambda_{1}+...+\lambda_{i-1}$ para $2 \leq i < k$, $q_{i}$ := $\frac{n}{\lambda_{i}}$ y (x,y) $\epsilon$ [$\sigma_{i},\sigma_{i}+\lambda_{i})\times N $.
+
+\end{defi}
+
+Sin embargo al utilizar la transformaci\'on (1) en nuestro sistema no genero los resultados esperados; por ello siguiendo el esquema planteado por Jiri \cite{Jiri} de la forma en la cual se debe proceder para trabajar el mapa de Baker sobre una matriz se ha planteado la siguiente definici\'on alterna:
+
+\begin{defi} Transformaci\'on discreta de Baker II :
+
+Sea N en conjunto N=\{0,1,2..,n-1\} de n\'umeros enteros y sea $\lambda$ un conjunto de enteros, $\lambda$=$\{\lambda_{1}, \lambda_{2},...,\lambda_{k}\}$, que satisface las siguientes propiedades:
+
+\begin{itemize}
+	\item $\lambda_{1}+\lambda_{2}+...+\lambda_{k}$=n.
+	\item $\lambda_{i}\mid n$ $\forall$ i $\epsilon$ \{1,2,...,k\}
+\end{itemize}
+
+Definimos la transformaci\'on discreta de Baker $B_{N,\lambda}$ : N $\times$ N $\longmapsto$ N $\times$ N de la siguiente manera:
+
+\begin{equation}
+  B_{N,\lambda}(x,y) = ( n - \sigma_{i} - \lfloor\frac{n-(x+1)}{q_{i}}\rfloor -1 , \frac{y-\sigma_{i}}{q_{i}} + [n-(x+1)] \ mod \ q_{i} ) 
+\end{equation}
+
+De donde $\sigma_{1}$ := 0 y $\sigma_{i}$ := $\lambda_{1}+...+\lambda_{i-1}$ para $1 \leq i < k$, $q_{i}$ := $\frac{n}{\lambda_{i}}$ y (x,y) $\epsilon$ $ N \times [\sigma_{i},\sigma_{i}+\lambda_{i})$.
+
+\end{defi}
+
+Seg\'un Jiri\cite{Jiri} la transformaci\'on $B_{N,\lambda}$ permuta la matriz como se sigue. Dada una matriz cuadrada de dimensi\'on \emph{N} se divide en $\mid\lambda\mid$ matrices de tama\~no $N\times\lambda_{i}$, cada una de las cuales a su vez es dividida en $\lambda_{i}$ matrices de dimensi\'on $\frac{N}{\lambda_{i}}\times\lambda_{i}$ con \emph{N} elementos, llamaremos a estas \'ultimas cajas, la propuesta de Jiri\cite{Jiri} es dada una caja se debe proceder de forma forma an\'aloga al mapa de Baker columna a columna. En ejemplo para una matriz de $8\times8$ es el siguiente. Supongase el conjunto $\lambda$=\{1,2,4,1\}.
+
+\IncludeImage{./images/a}{130}{Configuraci\'on para $\Psi$}{a}
+
+Una vez aplicamos la transformaci\'on $B_{8,\lambda}$ obtenemos.
+
+\IncludeImage{./images/b}{130}{$B_{8,\lambda}(\Psi)$}{b}
+
+Un aspecto importante para el trabajo es la dimensi\'on de la matriz de cifrado, llevandonos a la siguiente insignia.
+
+\begin{insig}
+ El sistema tendr\'a un excelente desempeño para N tales que el n\'umero de divisores sea m\'aximo.
+\end{insig}
+
+Para validar esta insignia se realizaron pruebas con matrices cuya dimensi\'on era un n\'umero primo dando como resultado que tan solo se generaban dos matrices para cualquier cantidad arbitraria de mensajes.
+
+A este punto contamos con las herramientas necesarias para hablar del proceso que se sigue para generar la matriz de cifrado, para ello nos apoyamos de la noci\'on de \emph{funci\'on iterada}, que consiste en evaluar k-veces la funci\'on sobre si misma $f^{k}=f\circ ... \circ f $; un ejemplo, para \emph(k=3) $f^{3}=f(f(f(x)))$. La matriz de cifrado es generada en los siguientes pasos.
+
+\begin{itemize}
+ \item Por medio del mensaje de entrada se genera el valor \emph{u}.
+ \item Se evalua la transformaci\'on de Baker iterando sobre ella \emph{u} veces, $B^{u}_{N,\lambda}(\Psi)$.
+\end{itemize}
+
+De donde el valor \emph{u} es obtenido de la siguiente manera.
+
+$$u :=  (\alpha_{1}*(1 \ mod \ q)+\alpha_{2}*(2 \ mod \ q)+...+\alpha_{j}(n \ mod \ q)) \ mod \ j $$
+
+Donde $q\approx 18*N$.
+
+Para medir la sensibilidad del sistema frente a pequeños cambios, fueron ejecutadas 1000 pruebas con distintas permutaciones sobre un mensaje \emph{x} obteniendo que se generaba la misma matriz de cifrado con una probabilidad del 0.05. El mensaje usado en las pruebas fue el siguiente.
+
+\begin{center}
+``Los indigenas, que llegaron luciendo sus pinturas, plumas, arcos y flechas tradicionales, descendieron pacificamente del techo del Congreso poco despues, recorrieron la gran avenida donde se encuentran los ministerios y luego se sumaron a varios cientos de manifestantes anti Copa y del movimiento de los Sin Techo que marchaban hacia el estadio."
+\end{center}
+
+

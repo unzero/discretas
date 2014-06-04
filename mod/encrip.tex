@@ -1,0 +1,28 @@
+Para la funci\'on de cifrado $f_{encryp}$ se requieren tres valores $\alpha$, $\phi$ y $\rho$, los cuales son el car\'acter a cifrar, el contador de iteraciones y el n\'umero de iteraciones que se realizar\'an al car\'acter $\alpha$ 
+respectivamente.
+
+El algoritmo de cifrado va a estar determinado por la posici\'on del car\'acter $\alpha$ en la matriz de cifrado, cada nueva posici\'on $x_{1}$ estaba dada por la ecuaci\'on basada en el fractal de Collatz (**) biblograf\'ia (**) siguiente:
+
+\[ x_{1} = 
+\begin{cases} 
+	\frac{x}{2} & \text {si } x \text { es par} \\ 
+	3x+1 & \text {si} x \text {es impar} 
+\end{cases} 
+\] 
+
+Sea $x_{1}$ la coordenada \emph{x} o \emph{y} de $\alpha$ en la matriz de cifrado.
+
+El valor de $\rho$ es aleatorio, elegido en el rango de [0,81), dicho valor representa la cantidad de iteraciones que se har\'an al car\'acter $\alpha$, el cu\'al ser\'a necesario para la funci\'on de decifrado.
+Despu\'es de cada iteraci\'on el valor de $\phi$ (siempre empezar\'a en 0) aumentar\'a en 1, el algoritmo se dentendr\'a cuando $\phi$ y $\rho$ sean iguales.
+Se podr\'ia decir que un valor puede salirse de la dimensi\'on de nuestra matriz (y lo hace) por lo que realizamos una modificaci\'on: 
+
+\[ x_{1} = 
+\begin{cases} 
+	\frac{x}{2} \text { mod  9} & \text {si } x \text { es par} \\ 
+	(3x+1) \text { mod 9} & \text {si  x} \text { es impar} 
+\end{cases} 
+\] 
+  
+
+El m\'odulo en base 9 nos permite que cada coordenada siempre est\'e dentro de nuestra matriz de cifrado.
+Al hacer esto notamos que al aplicar la funci\'on $f_{encryp}$ algunos valores llegaban al mismo destino; 1, 7 y 8 = 4 , 2 y 3 = 1, por lo que decidimos hacer un casteo de los valores que causaban conflicto para poder obtener una funci\'on biyectiva (condici\'on inicial de nuestra funci\'on $f_{encryp}$).

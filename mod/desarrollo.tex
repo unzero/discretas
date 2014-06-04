@@ -1,0 +1,69 @@
+\section{Desarrollo del problema}
+
+Luego de explorar diversas fuentes en busca de informaci\'on sobre cifrado basado en fractales y caos se ha llegado a la conclusi\'on de reunir varios aspectos de ellos con el fin de generar un SCF de alta calidad. Entre las ideas m\'as relevantes cabe resaltar las propuestas de Howell y Reese \cite{Howell}, Nadia y Muhammad \cite{Nadia2}, Makris y Ioannis \cite{Makris}, Pichler y Scharinger \cite{Pichler}, Jiri \cite{Jiri} y por \'ultimo la propuesta de Yuen y Wong \cite{Yuen}.
+
+Con el fin de poder tratar los detalles del SCF es prudente hablar de las definiciones base o preliminares.
+
+\begin{defi}:
+Definimos como $\Omega$ el conjunto de car\'acteres \{a,b,...,z,A,B,...,Z,0,1,2...,9,+,-,*,/,$<$,$>\\$,\#,$\gamma$,?,\%,\$,\{,\},coma,punto,[,],(,)\}; donde $\gamma$ es el espacio en blanco y sea $\Omega^{*}$ el conjunto de todas las cadenas sobre $\Omega$.
+\end{defi}
+
+\begin{defi}:
+Un SCF ($\xi$) es una **funci\'on para la cual
+$$\xi:\Omega^{*} \longmapsto \Omega^{*}$$
+$$    x \longmapsto x^{c} $$
+De donde x $\epsilon$ $\Omega^{*}$ y $x^{c}$ se dice la cadena cifrada de \emph{x}.
+\end{defi}
+
+La definici\'on 1 nos permite plantear nuestra primera insignia.\footnote{Las insignias son observaciones de gran importancia para el desarrollo del trabajo}
+
+\begin{insig} : 
+El SCF presentado est\'a limitado a trabajar unicamente con conjunto de car\'acteres $\Omega$.
+\end{insig}
+
+El alfabeto de entrada es considerado una insignia dado que indica la directriz que deben seguir los textos de entrada para el SCF; para un car\'acter no pertenesca a este conjunto el comportamiento del SCF no ha sido determinado. Con nuestras las dos primeras definiciones podemos describir el funcionamiento interno del SCF, para este fin se ha escrito el siguiente algoritmo.
+
+\begin{algo}
+SCF ($\xi$) : Dada una cadena x $\epsilon$ $\Omega^{*}$ con \textbf{j} car\'acteres; se procesar\'a de la siguiente manera.
+\begin{enumerate}
+ \item {Generar la matriz de cifrado.}
+ \item { Cifrar el mensaje
+	\begin{enumerate}
+	  \item Tomar el siguiente car\'acter de la cadena, $\alpha_{i}$.
+	  \item Elegir un n\'umero, entero, aleatorio dentro del dominio [a,b], $\varphi_{i}$.
+	  \item Evaluar $f_{encp}(\alpha_{i},\varphi_{i})$ obteniendo $\mu_{i}$.
+	  \item Almacenar $\varphi_{i}$,$\alpha_{i}$,$\mu_{i}$.
+	 \item S\'i aun quedan car\'acteres volver a 1, si no transmitir.
+	\end{enumerate}
+ }
+\end{enumerate}
+\end{algo}
+
+Al finalizar nuestro algoritmo sobre la cadena \emph{x} tendremos la siguiente configuraci\'on para las entradas y salidas.
+
+\begin{center}
+  \begin{tabular}{ |c | c | c | }
+    \hline
+    Llave & Entrada & $f_{encp}$ \\	
+    \hline
+    $\varphi_{1}$ & $\alpha_{1}$ & $\mu_{1}$ \\
+    \hline
+    $\varphi_{2}$ & $\alpha_{2}$ & $\mu_{2}$ \\
+    \hline
+    : & : & : \\
+    \hline
+    $\varphi_{j}$ & $\alpha_{j}$ & $\mu_{j}$ \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Del algoritmo 1 podemos introducir las siguientes preguntas a\'un sin responder.
+
+\begin{itemize}
+	\item ?`Qu\'e es la matriz de cifrado?
+	\item ?`Qui\'enes son los extremos del dominio?
+	\item ?`Qu\'e es $f_{encp}(\alpha,\varphi)$?
+	\item ?`Qui\'en ser\'a $x^{c}$?
+\end{itemize}
+
+Las preguntas sobre la matriz de cifrado, los extremos del dominio y $f_{encp}(\alpha,\varphi)$ se trabajan en la secci\'on 4. Igualmente la primera esta relacionada con la forma en la cual debemos transmitir el mensaje, motivo por el cual ser\'a resuelta en la secci\'on 5.

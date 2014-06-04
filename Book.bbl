@@ -1,0 +1,105 @@
+\begin{thebibliography}{ASMM12}
+
+\bibitem[A.12]{Saenz}
+S\'aenz~Ricardo A.
+\newblock Las matem\'aticas de los fractales.
+\newblock 2012.
+
+\bibitem[AD03]{Kuperin}
+Kuperin~Yu. A. and Pyatkin D.A.
+\newblock Two-dimensional chaos: The baker map under control.
+\newblock 2003.
+
+\bibitem[ASMM12]{Nadia}
+Nadia M.~G. Al-Saidi, Mohamad~Rushdan Md., and Said Arkan~J. Mohammed.
+\newblock Finite and infinite field cryptography analysis and applications.
+\newblock 2012.
+
+\bibitem[BAM03]{Howell}
+Howell Brandi, Reese Anna, and Basile Michael.
+\newblock Fractal cryptology.
+\newblock Technical report, New Mexico High School, New Mexico, 2003.
+
+\bibitem[CEE91]{AJCrilly}
+A.J. Crilly, R.A. Earnshaw, and H.~Jones Editores.
+\newblock {\em Fractals and Chaos}.
+\newblock Springer-Verlag, New York, 1991.
+
+\bibitem[FJ]{Pichler}
+Pichler Franz and Scharinger Josef.
+\newblock Finite dimensional generalized baker dynamical systems for
+  cryptographic applications.
+
+\bibitem[Fri97]{Jiri}
+Jiri Fridrich.
+\newblock Symmetric ciphers based on two-dimensional chaotic maps.
+\newblock {\em International Journal of Bifurcation and Chaos}, 1997.
+
+\bibitem[FY07]{Huang}
+Huang Feng and Feng Yong.
+\newblock Security analysis of image encryption based on two-dimensional
+  chaotic maps and improved algorithm.
+\newblock {\em Journal of Harbin Institute of Technology}, 2007.
+
+\bibitem[GI12]{Makris}
+Makris George and Antoniou Ioannis.
+\newblock Cryptography with chaos.
+\newblock 2012.
+
+\bibitem[HW05]{Kwok}
+Kwok H.S and Tang~K.S Wallace.
+\newblock A fast image encryption system based on chaotic maps with finite
+  precision representation.
+\newblock {\em Chaos, Solitons and Fractals}, 2005.
+
+\bibitem[Lju01]{Ljupco}
+Kocarev Ljupco.
+\newblock Chaos-bases cryptography: A brief overview.
+\newblock 2001.
+
+\bibitem[Man89]{Mandelbrot}
+B.B. Mandelbrot.
+\newblock Fractal geometry: what is it, and what does it do?
+\newblock 1989.
+
+\bibitem[Mar]{Sorando}
+Sorando~Jos\'e Mar\'ia.
+\newblock Fractales, geometr\'ia del caos.
+
+\bibitem[Mar04]{Churchill}
+Churchill Martin.
+\newblock Introduction to fractal geometry.
+\newblock 2004.
+
+\bibitem[Mig]{Reyes}
+Reyes Miguel.
+\newblock Fractales.
+
+\bibitem[Mik05]{MikeAshby}
+Ashby Mike.
+\newblock How to write a paper, 2005.
+
+\bibitem[Ner02]{Rubiano}
+Rubiano O.~Gustavo Nervado.
+\newblock {\em Fractales para Profanos}.
+\newblock Unilibros, Bogot\'a, 2002.
+
+\bibitem[NMR09]{Nadia2}
+M.G. Al-Saidi Nadia and Md.~Said Muhammad~Rushdan.
+\newblock A new approach in cryptographic systems using fractal image coding.
+\newblock 2009.
+
+\bibitem[oToE]{CriticalWriting}
+The~University of~Tokyo and Department of~English.
+\newblock In your words or other's.
+
+\bibitem[PE04]{Gutierrez}
+Gutierrez Pablo and Hott Ewaldo.
+\newblock Introducci\'on al mundo fractal, 2004.
+
+\bibitem[YW11]{Yuen}
+Ching-Hung Yuen and Kwok-Wo Wong.
+\newblock Chaos-based encryption for fractal image coding.
+\newblock 2011.
+
+\end{thebibliography}

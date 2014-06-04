@@ -1,0 +1,43 @@
+\section{Transmisi\'on del mensaje}
+
+Al igual que la funci\'on de encriptaci\'on la tranmisici\'on final del mensaje representa uno de los puntos cr\'iticos para el SCF. Al abordar esta tarea es necesario preguntarnos e intentar centrar nuestra discusi\'on en las siguientes dos preguntas:
+
+\begin{itemize}
+	\item ?`Qu\'e informaci\'on transmitir?
+	\item ?`C\'omo la informaci\'on tramsmitida puede afectar la seguridad y validez del SCF?
+\end{itemize}
+
+En la introducci\'on al trabajo hablamos de la limitaci\'on propuesta por Howell \cite{Howell} sobre el decifrado del mensaje; con el fin de poder tener el control y tener recursos para desarrollar esta labor, se ha decidido que el mensaje final contiene los siguientes elementos.
+
+\begin{itemize}
+	\item Matriz de cifrado ($\Psi$).
+	\item Cadena cifrada de \emph{x} ($x^{c}$).
+\end{itemize}
+
+Previo a la discusi\'on sobre la importancia de estos dos componentes es necesario conocer a forma de la cadena cifrada de \emph{x}. $x^{c}$ presentar\'a la siguiente configuraci\'on.
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c |}
+	\hline
+	$\mu_{1}$ & $\varphi_{1}$ & $\varphi_{2}$ & $\mu_{2}$ & ... \\
+	\hline
+	$\mu_{100}$ & $\varphi_{100}$ & $\varphi_{101}$ & $\mu_{101}$ & ...\\
+	\hline
+\end{tabular}
+\end{center}
+
+Es decir se transmitiran intercalados la car\'acteres cifrados y sus respectivas llaves, adem\'as de esto las llaves estar\'an dadas como un car\'acter de la matriz ($\Psi$); esto no representa problema alguno ya que como se vio en la funci\'on de cifrado la llave tomara los valores [0,N*N).
+
+De ahora en adelante nos referiremos a $\varphi_{i}$ como la llave asociada al car\'acter $\mu_{i}$. Una vez conocidos los elementos que componen nuestro mensaje final es necesario conocer la importancia de cada uno dentro del proceso de decifrado, recordemos que un buen m\'etodo de cifrado debe comportarse de la siguiente manera.
+
+\IncludeImage{./images/d}{100}{Comportamiento del sistema}{d}
+
+La funci\'on de $\Psi$ dentro del mensaje final es vital como se menciono en la secci\'on para una cadena \emph{x} la matriz que se genera puede ser distinta a la de otro mensaje con una probabilidad alta; alguien podria pensar en reconstruir $\Psi$ a partir de $x^{c}$ sin embargo esta tarea puede representar un imposible dado que las condiciones iniciales de \emph{x} no existen y como se explico en la secci\'on 4 es necesario conocer \emph{x} para generar la matriz que le corresponde. Todo lo anterior se resume en la siguiente insignia.
+
+\begin{insig}
+	Para poder conocer $x$ a partir de $x^{c}$ es necesario conocer $\Psi$.
+\end{insig}
+
+Este resultado es importante para evaluar la seguridad del SCF. Al intentar vulnerar un sistema lo primero en lo que podemos pensar es tratar con fuerza bruta procediendo de la siguiente manera, dada $x^{c}$ probar con todas las posibles combinaciones para la matriz $\Psi$, mas este ataque es ejecutado en un tiempo de orden $(h*b)!$, donde \emph{h,b} representan el n\'umero de filas y columnas de $\Psi$.
+
+La importancia de $\mu$ es algo trivial ya que sin este car\'acter no hay mensaje. Por otra parte la importancia de la llave esta dado el comportamiento de la funci\'on de cifrado y las propiedades del fractal, si no se tuviera el valor de esta llave. No se podria aplicar con presici\'on la transformaci\'on inversa, se podria intentar con todos los valores desde el 0 hasta el 80 pero esto represente un ataque de fuerza bruta poco eficiente.

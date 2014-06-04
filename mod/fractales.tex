@@ -1,0 +1,24 @@
+\section{Fractales}
+
+Los fractales son representaciones geom\'etricas de gran inter\'es para cualquier persona ya sea por la belleza de sus formas, su simplicidad o por la naturaleza que los gobierna. M\'as all\'a de estas razones existe un mundo matem\'atico que poco a poco ha venido emergiendo y ha sido aplicado en campos como compresi\'on de archivos, generaci\'on de graficas, simulaciones y por su puesto en la criptograf\'ia; campo en el cual nos puede llevar a encontrar nuevos resultados de gran inter\'es. 
+
+Hasta el momento hemos hablado sobre fractales sin embargo no se ha dado una definici\'on rigurosa. Rubiano define un fractal de la siguiente manera ''Un fractal es un subconjunto del plano que es autosimilar y cuya dimensi\'on fractal excede a su dimensi\'on topol\'ogica" \cite{Rubiano} sin embargo, ¿Qu\'e es dimensi\'on fractal? ¿Qu\'e es dimensi\'on topol\'ogica?. En una vista r\'apida a la teor\'ia de (**falta definici\'on eso lo hago luego**).
+
+Es tambi\'en importante resaltar lo que nos dicen Gutierrez y Hott \cite{Gutierrez} sobre la relaci\'on del caos y los fractales, "Los fractales son la representaci\'on gr\'afica del caos".
+
+Los fractales presentan propiedades algunas de las cuales son de mayor inter\'es para el presente trabajo, algunas de ellas son:
+ 
+\begin{enumerate}
+  \item Tienen un comportamiento ca\'otico. 
+  \item Poseen una dimensi\'on fraccionaria, infinita.
+  \item Son autosimilares
+  \item Son representados por un algoritmo \emph{simple}\footnote{En el contexto del presente trabajo simple no se (**).}
+\end{enumerate}
+
+El comportamiento ca\'otico de los fractales hace de los SCF sistemas eficientes y seguros para la generaci\'on de un mensaje cifrado, tal cual como es sugerido por Nadia y Mohamad \cite{Nadia,Nadia2} gracias al caos el trabajo que se debe realizar para vulnerar un SCF se vuelve costoso, necesita un an\'alisis no convencional y requiere de una gran cantidad de tiempo, tanto humano como de m\'aquina. El llamado \emph{Efecto mariposa} propiedad intrinseca del caos y por ende de los fractales actua directamente sobre el sistema reflejandose en \emph{dado un peque\~no cambio sobre el mensaje original, la cadena cifrada sufrir\'a un cambio brusco}.
+
+Por otra parte la propiedad de ser autosimilar es explotado en el dise\~no del algoritmo que represente al fractal. En una primera aproximaci\'on este algoritmo puede estar dado en t\'erminos de una funci\'on recursiva, infinita, que debe ser acotada en un momento dado ya sea por los limites f\'isicos de la m\'aquina o por alg\'un otro l\'imite impuesto por el usuario. 
+
+Se han mencionado algunas de las ventajas que poseen los fractales para el SCF sin embargo Howell y Reese \cite{Howell} en su trabajo exponen el mayor de los problemas en el uso de fractales aplicados a la criptograf\'ia; la complejidad para decifrar la informaci\'on, lo cual es un paso obligatorio para la validaci\'on del sistema. Durante el desarrollo se ha prestado atenci\'on a este problema e intentaremos dar un tratamiento a la soluci\'on propuesta de tal forma que obtengamos un sistema verificable.
+
+
