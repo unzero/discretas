@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.4.5)  2 JUN 2014 22:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.4.5)  5 JUN 2014 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,13 +302,13 @@ L/cmm/m/it/10 ^^U$ \OT1/cmr/m/it/10 un con-jun-to de en-te-ros, $\OML/cmm/m/it/
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
-<./images/a.png, id=31, 1238.37656pt x 277.78781pt>
+<./images/a.png, id=30, 1238.37656pt x 277.78781pt>
 File: ./images/a.png Graphic file (type png)
  <use ./images/a.png>
 Package pdftex.def Info: ./images/a.png used on input line 51.
 (pdftex.def)             Requested size: 369.88582pt x 82.97244pt.
 
-<./images/b.png, id=32, 1239.88219pt x 277.78781pt>
+<./images/b.png, id=31, 1239.88219pt x 277.78781pt>
 File: ./images/b.png Graphic file (type png)
  <use ./images/b.png>
 Package pdftex.def Info: ./images/b.png used on input line 55.
@@ -316,26 +316,26 @@ Package pdftex.def Info: ./images/b.png used on input line 55.
 Missing character: There is no Ã in font cmti10!
 Missing character: There is no ± in font cmti10!
 
-[5 <./images/a.png>]
+[5]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ± in font cmr10!
-) (./mod/encrip.tex) (./mod/transmit.tex [6 <./images/b.png>] <./images/d.png, 
-id=41, 673.10294pt x 323.08942pt>
+) (./mod/encrip.tex [6 <./images/a.png> <./images/b.png>])
+(./mod/transmit.tex <./images/d.png, id=41, 673.10294pt x 323.08942pt>
 File: ./images/d.png Graphic file (type png)
- <use ./images/d.png>
+
+<use ./images/d.png>
 Package pdftex.def Info: ./images/d.png used on input line 33.
 (pdftex.def)             Requested size: 284.52756pt x 136.57416pt.
-)
-(./mod/reverse.tex [7 <./images/d.png>]) (./mod/summary.tex) (./Book.bbl
-[8]) [9] (./Book.aux
+ [7 <./images/d.png>]) (./mod/reverse.tex)
+(./mod/summary.tex [8]) (./Book.bbl [9]) [10] (./Book.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 3607 strings out of 493308
- 46620 string characters out of 6143617
- 124190 words of memory out of 5000000
- 6987 multiletter control sequences out of 15000+600000
+ 3608 strings out of 493308
+ 46629 string characters out of 6143617
+ 125198 words of memory out of 5000000
+ 6988 multiletter control sequences out of 15000+600000
  11227 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,13n,37p,708b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -353,10 +353,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Book.pdf (9 pages, 714064 bytes).
+Output written on Book.pdf (10 pages, 718038 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

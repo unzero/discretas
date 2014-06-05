@@ -16,45 +16,45 @@ Warning--empty note in Churchill
 Warning--empty note in Reyes
 Warning--empty journal in Nadia2
 Warning--empty journal in Yuen
-You've used 21 entries,
+You've used 22 entries,
             2543 wiz_defined-function locations,
-            671 strings with 6572 characters,
-and the built_in function-call counts, 6216 in all, are:
-= -- 593
-> -- 318
-< -- 9
-+ -- 101
-- -- 99
-* -- 363
-:= -- 1104
-add.period$ -- 57
-call.type$ -- 21
-change.case$ -- 119
-chr.to.int$ -- 21
-cite$ -- 34
-duplicate$ -- 259
-empty$ -- 420
-format.name$ -- 129
-if$ -- 1206
+            675 strings with 6621 characters,
+and the built_in function-call counts, 6472 in all, are:
+= -- 616
+> -- 326
+< -- 10
++ -- 103
+- -- 101
+* -- 374
+:= -- 1143
+add.period$ -- 59
+call.type$ -- 22
+change.case$ -- 124
+chr.to.int$ -- 22
+cite$ -- 35
+duplicate$ -- 270
+empty$ -- 445
+format.name$ -- 133
+if$ -- 1260
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 15
-newline$ -- 102
-num.names$ -- 63
-pop$ -- 148
+newline$ -- 106
+num.names$ -- 66
+pop$ -- 158
 preamble$ -- 1
-purify$ -- 141
+purify$ -- 147
 quote$ -- 0
-skip$ -- 233
+skip$ -- 245
 stack$ -- 0
-substring$ -- 149
-swap$ -- 8
-text.length$ -- 9
-text.prefix$ -- 9
+substring$ -- 156
+swap$ -- 9
+text.length$ -- 10
+text.prefix$ -- 10
 top$ -- 0
-type$ -- 160
+type$ -- 168
 warning$ -- 13
-while$ -- 54
-width$ -- 24
-write$ -- 233
+while$ -- 56
+width$ -- 25
+write$ -- 243
 (There were 13 warnings)
