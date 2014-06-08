@@ -15,6 +15,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{tikz}
 %SIRVE PARA GENERAR AUTOMATICAMENTE LAS ENUMERACIONES EN DEFINICIONES
 \newtheorem{defi}{\it DEFINICI\'ON}
 \newtheorem{algo}{\it ALGORITMO}
@@ -69,11 +70,11 @@
 %RUTA DE LA IMAGEN
 %NOMBRE DE LA IMAGEN
 %REFERENCIA DE LA IMAGEN <-- PARA PODER NOMBRARLA 
-\newcommand{\IncludeImage}[4]{
+\newcommand{\IncludeImage}[3]{
   \begin{figure}[ht!]
     \centering
       \includegraphics[width=#2mm]{#1.png}
-      %\caption{#3}
+      \caption{#3}
       %\label{#4}
   \end{figure}
 }
