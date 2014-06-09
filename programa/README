@@ -1,0 +1,27 @@
+El presente archivo busca explicar de forma breve el funcionamiento del SCF. 
+
+Para ejecutar el SCF desde un entorno GNU-Linux:
+	-Abrir una terminal
+	-Navegar hasta el directorio que contiene el ejecutable SCF
+	-Ejecutar el programa ./SCF
+
+El programa necesita de la siguiente lista de archivos:
+	-confg.txt := Representa la configuracion inicial del programa, este archivo esta junto al programa
+	-input.txt := Mensaje de entrada, en caso de estar vacio de produce un error.
+
+Notas.
+
+El programa no leera ni mostrara absolutamente nada, las entradas estan dadas en el archivo de configuracion e input.txt, las respectivas salidas se pondran en un archivo llamado output.txt
+
+Para el programa de decifrado se debe usar el programa DSCF, la entrada para el programa es el archivo output.txt que genera 
+el SCF, de igual manera el DSCF NO produce salidas, se genera un archivo llamado result.txt en el cual se podra encontrar 
+el mensaje original.
+
+
+Muchas Gracias
+Fractales Aplicados a la criptografia 
+Grupo K-ON
+David Ricardo Dager
+Manuel Arturo Ramirez
+Ciro Ivan Garcia
+
