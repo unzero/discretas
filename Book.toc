@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Introducci\'on}{2}
 \contentsline {section}{\numberline {2}Fractales}{2}
 \contentsline {section}{\numberline {3}Desarrollo del problema}{3}
-\contentsline {section}{\numberline {4}Matriz de cifrado y funci\'on de encriptaci\'on $f_{encryp}$}{5}
+\contentsline {section}{\numberline {4}Matriz de cifrado y funci\'on de encriptaci\'on $f_{encryp}$}{4}
 \contentsline {section}{\numberline {5}Transmisi\'on del mensaje}{8}
 \contentsline {section}{\numberline {6}Algoritmo para el descifrado}{9}
-\contentsline {section}{\numberline {7}Conclusiones}{10}
+\contentsline {section}{\numberline {7}Conclusiones}{9}
