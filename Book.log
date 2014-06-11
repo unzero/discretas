@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.4.5)  11 JUN 2014 18:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.4.5)  11 JUN 2014 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -508,72 +508,25 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write4
 \openout4 = `Book.toc'.
 
- (./mod/introd.tex
-
-LaTeX Warning: Citation `Nadia' on page 2 undefined on input line 6.
-
-
-LaTeX Warning: Citation `Ljupco' on page 2 undefined on input line 8.
-
-) (./mod/fractales.tex
-
-LaTeX Warning: Citation `Rubiano' on page 2 undefined on input line 5.
-
+ (./mod/introd.tex) (./mod/fractales.tex
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ¿ in font cmr10!
-[2]
-
-LaTeX Warning: Citation `Gutierrez' on page 3 undefined on input line 7.
-
-
-LaTeX Warning: Citation `Nadia' on page 3 undefined on input line 18.
-
-
-LaTeX Warning: Citation `Nadia2' on page 3 undefined on input line 18.
-
-
-LaTeX Warning: Citation `Howell' on page 3 undefined on input line 22.
-
-) (./mod/desarrollo.tex
-
-LaTeX Warning: Citation `Howell' on page 3 undefined on input line 3.
-
-
-LaTeX Warning: Citation `Nadia2' on page 3 undefined on input line 3.
-
-
-LaTeX Warning: Citation `Makris' on page 3 undefined on input line 3.
-
-
-LaTeX Warning: Citation `Pichler' on page 3 undefined on input line 3.
-
-
-LaTeX Warning: Citation `Jiri' on page 3 undefined on input line 3.
-
-
-LaTeX Warning: Citation `Yuen' on page 3 undefined on input line 3.
-
+ [2]) (./mod/desarrollo.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
+
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- [3]) (./mod/algo.tex
-
-LaTeX Warning: Citation `Jiri' on page 4 undefined on input line 11.
-
-[4] <./images/c.png, id=34, 671.50874pt x 692.5875pt>
+ [3]) (./mod/algo.tex [4]
+<./images/c.png, id=33, 671.50874pt x 692.5875pt>
 File: ./images/c.png Graphic file (type png)
  <use ./images/c.png>
 Package pdftex.def Info: ./images/c.png used on input line 25.
 (pdftex.def)             Requested size: 284.52756pt x 293.45279pt.
-
-
-LaTeX Warning: Citation `Jiri' on page 5 undefined on input line 25.
-
 
 Overfull \hbox (11.11827pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/m/it/10 Sea N en con-jun-to N=\OMS/cmsy/m/n/10 f\OT1/cmr/m/it/10 0,1
@@ -582,10 +535,6 @@ L/cmm/m/it/10 ^^U$ \OT1/cmr/m/it/10 un con-jun-to de en-te-ros, $\OML/cmm/m/it/
 10 ^^U$\OT1/cmr/m/it/10 =$\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^U[]; ^^U[]; :::;
  ^^U[]\OMS/cmsy/m/n/10 g$\OT1/cmr/m/it/10 ,
  []
-
-[5 <./images/c.png>]
-
-LaTeX Warning: Citation `Jiri' on page 6 undefined on input line 46.
 
 
 Overfull \hbox (11.11827pt too wide) in paragraph at lines 50--51
@@ -596,21 +545,15 @@ L/cmm/m/it/10 ^^U$ \OT1/cmr/m/it/10 un con-jun-to de en-te-ros, $\OML/cmm/m/it/
  ^^U[]\OMS/cmsy/m/n/10 g$\OT1/cmr/m/it/10 ,
  []
 
-
-LaTeX Warning: Citation `Jiri' on page 6 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Jiri' on page 6 undefined on input line 67.
-
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
-<./images/a.png, id=38, 1238.37656pt x 277.78781pt>
+[5] <./images/a.png, id=39, 1238.37656pt x 277.78781pt>
 File: ./images/a.png Graphic file (type png)
  <use ./images/a.png>
 Package pdftex.def Info: ./images/a.png used on input line 69.
 (pdftex.def)             Requested size: 369.88582pt x 82.97244pt.
 
-<./images/b.png, id=39, 1239.88219pt x 277.78781pt>
+<./images/b.png, id=40, 1239.88219pt x 277.78781pt>
 File: ./images/b.png Graphic file (type png)
  <use ./images/b.png>
 Package pdftex.def Info: ./images/b.png used on input line 73.
@@ -618,61 +561,47 @@ Package pdftex.def Info: ./images/b.png used on input line 73.
 Missing character: There is no Ã in font cmti10!
 Missing character: There is no ± in font cmti10!
 
-[6 <./images/a.png> <./images/b.png>]
+[6 <./images/c.png> <./images/a.png>]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ± in font cmr10!
-) (./mod/encrip.tex
-
-LaTeX Warning: Citation `Labelle' on page 7 undefined on input line 4.
-
-) (./mod/transmit.tex [7]
-
-LaTeX Warning: Citation `Howell' on page 8 undefined on input line 10.
-
-<./images/d.png, id=49, 673.10294pt x 323.08942pt>
+) (./mod/encrip.tex) (./mod/transmit.tex
+[7 <./images/b.png>] <./images/d.png, id=49, 673.10294pt x 323.08942pt>
 File: ./images/d.png Graphic file (type png)
- <use ./images/d.png>
+
+<use ./images/d.png>
 Package pdftex.def Info: ./images/d.png used on input line 33.
 (pdftex.def)             Requested size: 284.52756pt x 136.57416pt.
-
-[8 <./images/d.png>]) (./mod/reverse.tex) (./mod/summary.tex) (./Book.bbl
-[9]) [10] (./Book.aux
+ [8 <./images/d.png>]) (./mod/reverse.tex)
+(./mod/summary.tex [9]) (./Book.bbl [10]) [11] (./Book.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
  12900 strings out of 493308
  248109 string characters out of 6143617
- 296585 words of memory out of 5000000
+ 298701 words of memory out of 5000000
  16077 multiletter control sequences out of 15000+600000
  11227 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,13n,54p,708b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Book.pdf (10 pages, 787118 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Book.pdf (11 pages, 787267 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
