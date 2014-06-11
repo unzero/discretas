@@ -1,0 +1,126 @@
+\documentclass{beamer}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphics} % LaTeX
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.bmp, .png, .jpg, .gif}
+
+\usetheme{Warsaw}
+\usecolortheme{crane}
+\useoutertheme{shadow}
+
+\title
+{
+  \textbf{Proyecto Final de Matem\'aticas Discretas \\ 
+  Fractales Aplicados a la criptograf\'ia \\ 
+  Grupo: K-ON}
+}
+
+%DATOS SOBRE LOS AUTORES
+\author
+{
+  \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+  \textbf{David Ricardo Dager} \\ 
+  \textbf{Manuel Arturo Ram\'irez} \\ 
+  \textbf{Ciro Iv\'an Garc\'ia} \\ \\ \\
+  \textbf{Presentado a: Andres Villaveces Ni\~no} \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+  \textbf{Universidad Nacional de Colombia} \\
+  \textbf{Facultad de Ingenier\'ia} \\ 
+  \textbf{Departamento de Ingenier\'ia de Sistemas e Industrial}
+}
+
+\newcommand{\IncludeImage}[4]{
+  \begin{figure}[ht!]
+    \centering
+      \includegraphics[width=#2mm]{#1.png}
+      %\caption{#3}
+      %\label{#4}
+  \end{figure}
+}
+
+\begin{document}
+\begin{frame}
+ \titlepage
+\end{frame}
+\begin{frame}
+ \frametitle{Fractales}
+ ``Un fractal es la representaci\'on gr\'afica del caos'' (Gutierrez y Hott).\\
+ Caracter\'isticas a resaltar:
+ \begin{itemize}
+  \item Comportamiento ca\'otico.
+  \item Autosimilares.
+  \item Representaci\'on algor\'itmica ``simple''.
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{Caos (matem\'atico)}
+ \begin{itemize}
+  \item An\'alisis no convencional.
+  \item Ligado fuertemente a condiciones iniciales.
+  \item Efecto mariposa es una poripiedad intr\'inseca del caos.
+  \item Trayectoras cuasi peri\'odicas.
+  \item Atractores extra\~nos.
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{Collatz}
+ Conjetura de Collatz :
+ \IncludeImage{./images/cf}{95}{Conjetura de Collatz}{a}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Transformaci\'on de Baker}
+ Versi\'on general:
+ Sea N en conjunto N=\{0,1,2..,n-1\} de n\'umeros enteros y sea $\lambda$ un conjunto de enteros, $\lambda$=$\{\lambda_{1}, \lambda_{2},...,\lambda_{k}\}$, que satisface las siguientes propiedades:
+
+\begin{itemize}
+	\item $\lambda_{1}+\lambda_{2}+...+\lambda_{k}$=n.
+	\item $\lambda_{i}\mid n$ $\forall$ i $\epsilon$ \{1,2,...,k\}
+\end{itemize}
+
+Definimos la transformaci\'on discreta de Baker $T_{N,\lambda}$ : N $\times$ N $\longmapsto$ N $\times$ N de la siguiente manera:
+
+\begin{equation}
+  T_{N,\lambda}(x,y) = [q_{i}(x-\sigma_{i}) + y \ mod \ q_{i} , \frac{1}{q_{i}}(y - y \ mod \ q_{s} ) + \sigma_{i}
+\end{equation}
+
+De donde $\sigma_{1}$ := 0 y $\sigma_{i}$ := $\lambda_{1}+...+\lambda_{i-1}$ para $2 \leq i < k$, $q_{i}$ := $\frac{n}{\lambda_{i}}$ y (x,y) $\epsilon$ [$\sigma_{i},\sigma_{i}+\lambda_{i})\times N $.
+ 
+\end{frame}
+
+\begin{frame}
+\frametitle{Transformaci\'on de Baker}
+Tomado de Jiri:
+ \IncludeImage{./images/j}{70}{imagen tomada de Jiri}{b}
+\end{frame}
+
+\begin{frame}
+\frametitle{ Transformaci\'on de Baker II}
+  Sea N en conjunto N=\{0,1,2..,n-1\} de n\'umeros enteros y sea $\lambda$ un conjunto de enteros, $\lambda$=$\{\lambda_{1}, \lambda_{2},...,\lambda_{k}\}$, que satisface las siguientes propiedades:
+
+\begin{itemize}
+	\item $\lambda_{1}+\lambda_{2}+...+\lambda_{k}$=n.
+	\item $\lambda_{i}\mid n$ $\forall$ i $\epsilon$ \{1,2,...,k\}
+\end{itemize}
+
+Definimos la transformaci\'on discreta de Baker $B_{N,\lambda}$ : N $\times$ N $\longmapsto$ N $\times$ N de la siguiente manera:
+
+\begin{equation}
+  B_{N,\lambda}(x,y) = ( n - \sigma_{i} - \lfloor\frac{n-(x+1)}{q_{i}}\rfloor -1 , \frac{y-\sigma_{i}}{q_{i}} + [n-(x+1)] \ mod \ q_{i} ) 
+\end{equation}
+
+De donde $\sigma_{1}$ := 0 y $\sigma_{i}$ := $\lambda_{1}+...+\lambda_{i-1}$ para $1 \leq i < k$, $q_{i}$ := $\frac{n}{\lambda_{i}}$ y (x,y) $\epsilon$ $ N \times [\sigma_{i},\sigma_{i}+\lambda_{i})$.
+
+\end{frame}
+
+\begin{frame}
+ Gracias.
+\end{frame}
+
+
+\end{document}
