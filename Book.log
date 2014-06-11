@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.4.5)  11 JUN 2014 18:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.4.5)  11 JUN 2014 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -488,9 +488,7 @@ LaTeX Info: Redefining \. on input line 83.
 LaTeX Info: Redefining \% on input line 83.
 
 ABD: EveryShipout initializing macros
-Missing character: There is no Â in font cmbx12!
 Missing character: There is no ­ in font cmbx12!
-Missing character: There is no Â in font cmbx12!
 Missing character: There is no ­ in font cmbx12!
 
 <escudo_un.png, id=4, 602.25pt x 554.07pt>
@@ -579,7 +577,7 @@ LaTeX Info: Redefining \% on input line 6.
 Here is how much of TeX's memory you used:
  12900 strings out of 493308
  248109 string characters out of 6143617
- 298701 words of memory out of 5000000
+ 298699 words of memory out of 5000000
  16077 multiletter control sequences out of 15000+600000
  11227 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
