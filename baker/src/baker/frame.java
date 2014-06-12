@@ -73,7 +73,7 @@ public class frame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 642, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -86,8 +86,9 @@ public class frame extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(41, 41, 41)
-                        .addComponent(jButton1)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                        .addComponent(jButton1)
+                        .addGap(0, 312, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,7 +283,7 @@ public class frame extends javax.swing.JFrame {
     /*METODO DE LECTURA PARA LA CONFIGURACION INICIAL*/
     void read_init_config(){
         BufferedReader reader = null;
-        try{
+        /*try{
            String new_line;
            reader = new BufferedReader(new FileReader("./confg.txt"));
            new_line = reader.readLine();
@@ -302,8 +303,17 @@ public class frame extends javax.swing.JFrame {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "FALTA EL ARCHIVO DE CONFIGURACION INICIAL, EL PROGRAMA SE CERRARA", "Error", JOptionPane.ERROR_MESSAGE);
             System.exit(-1);
-        }
-        
+        }*/
+        /*LLENADO MANUAL*/
+        n = 100;
+        q = 1800;
+        for(int x=0;x<n;++x){
+               LinkedList<Character> tmp = new LinkedList<Character>();
+               encode_matrix.add(tmp);
+               for(int y=0;y<n;++y){
+                   encode_matrix.get(x).add('A');
+               }
+           }
     }
     
     /*CAMPOS PARA EL PROGRAMA*/

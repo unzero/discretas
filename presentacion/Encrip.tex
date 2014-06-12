@@ -1,10 +1,9 @@
-\documentclass{beamer}
-
+\documentclass[dvipdfm]{beamer}
+\usepackage{eso-pic}
+\usepackage{graphicx} 
+\usepackage{anysize}
 \usepackage[spanish]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage[dvips]{graphics} % LaTeX
-\usepackage{graphicx}
-\DeclareGraphicsExtensions{.bmp, .png, .jpg, .gif}
+\usepackage{amsmath}
 
 \usetheme{Warsaw}
 \usecolortheme{crane}
@@ -40,12 +39,14 @@
 }
 
 \begin{document}
+
 \begin{frame}
  \titlepage
 \end{frame}
+
 \begin{frame}
  \frametitle{Fractales}
- ``Un fractal es la representaci\'on gr\'afica del caos'' (Gutierrez y Hott).\\
+ ``Un fractal es la representaci\'on gr\'afica del caos'' (Gutierrez y Hott).\newline
  Caracter\'isticas a resaltar:
  \begin{itemize}
   \item Comportamiento ca\'otico.
@@ -76,20 +77,13 @@
 \begin{frame}
  \frametitle{Transformaci\'on de Baker}
  Versi\'on general:
- Sea N en conjunto N=\{0,1,2..,n-1\} de n\'umeros enteros y sea $\lambda$ un conjunto de enteros, $\lambda$=$\{\lambda_{1}, \lambda_{2},...,\lambda_{k}\}$, que satisface las siguientes propiedades:
-
-\begin{itemize}
-	\item $\lambda_{1}+\lambda_{2}+...+\lambda_{k}$=n.
-	\item $\lambda_{i}\mid n$ $\forall$ i $\epsilon$ \{1,2,...,k\}
-\end{itemize}
-
-Definimos la transformaci\'on discreta de Baker $T_{N,\lambda}$ : N $\times$ N $\longmapsto$ N $\times$ N de la siguiente manera:
+ Sea U el cuadrado unitario se define la transformaci\'on de Baker de la siguiente manera:
 
 \begin{equation}
-  T_{N,\lambda}(x,y) = [q_{i}(x-\sigma_{i}) + y \ mod \ q_{i} , \frac{1}{q_{i}}(y - y \ mod \ q_{s} ) + \sigma_{i}
+T(x,y) = (\frac{1}{p_{i}}(x-F_{i}) , p_{i}y+F_{i})
 \end{equation}
 
-De donde $\sigma_{1}$ := 0 y $\sigma_{i}$ := $\lambda_{1}+...+\lambda_{i-1}$ para $2 \leq i < k$, $q_{i}$ := $\frac{n}{\lambda_{i}}$ y (x,y) $\epsilon$ [$\sigma_{i},\sigma_{i}+\lambda_{i})\times N $.
+De donde (x,y) $\epsilon$ [$F_{i},F_{i}+p_{i})\times$ [0,1).
  
 \end{frame}
 
@@ -117,6 +111,55 @@ Definimos la transformaci\'on discreta de Baker $B_{N,\lambda}$ : N $\times$ N $
 De donde $\sigma_{1}$ := 0 y $\sigma_{i}$ := $\lambda_{1}+...+\lambda_{i-1}$ para $1 \leq i < k$, $q_{i}$ := $\frac{n}{\lambda_{i}}$ y (x,y) $\epsilon$ $ N \times [\sigma_{i},\sigma_{i}+\lambda_{i})$.
 
 \end{frame}
+
+\begin{frame}
+ \frametitle{Cifrar el mensaje}
+ El cifrado del mensaje se hace caracter a caracter:
+ \begin{itemize}
+ \item Tomar el caracter de la cadena, $\alpha_{i}$.
+ \item Elegir un n\'umero, entero, aleatorio dentro del dominio [a,b], $\varphi_{i}$.
+ \item Evaluar $f_{encp}(\alpha_{i},\varphi_{i})$ obteniendo $\mu_{i}$.
+ \item Almacenar $\varphi_{i}$,$\alpha_{i}$,$\mu_{i}$.
+ \item Si a\'un quedan caracteres volver a 1, si no transmitir.
+
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{$f_{encryp}$}
+ La funci\'on de encriptaci\'on (basada en la conjetura de Collatz) es la siguiente:
+ 
+ \[ x_{1} = 
+\begin{cases} 
+	\frac{x}{2} \text { mod  9} & \text {si } x \text { es par} \\ 
+	(3x+1) \text { mod 9} & \text {si  x} \text { es impar} 
+\end{cases} 
+\] 
+Por la naturaleza de la conjetura se realiza un casteo para los valores 3, 7 y 8.
+ 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Descifrar el mensaje}
+Para descifrar el mensaje debemos conocer la matriz de cifrado, ubicaremos el caracter cifrado $\mu$ en la matriz con la siguiente funci\'on
+
+\[ \mu_{decrypted} = 
+\begin{cases} 
+	0 	& \text { si } \mu = 0 \\ 
+	2*\mu 	& \text { si } 0 < \mu < 4 \\
+	1 	& \text { si } \mu = 4 \\
+	3 	& \text { si } \mu = 5 \\
+	8	& \text { si } \mu = 6 \\
+	5 	& \text { si } \mu = 7 \\
+	7	& \text { si } \mu = 8 \\
+\end{cases} 
+\] 
+El proceso se realiza $\varphi$ veces, que es la cantidad de iteraciones usadas para cifrar a $\mu$. 
+
+\end{frame}
+
 
 \begin{frame}
  Gracias.
