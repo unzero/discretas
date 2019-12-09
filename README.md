@@ -1,4 +1,4 @@
-#*Introducción
+# *Introducción
 
 Gracias a la expansión de la red y de la información en estos últimos años se puede acceder a una
 gran cantidad de rescursos, compartir con gente en lugares distantes, pero estos avances vienen
@@ -26,4 +26,4 @@ función de cifrado, corazón de , son trabajadas en la sección 4. El resultado
 para un mensaje serán expuestos en la sección 5. La sección 6 se encargara del algoritmo para descifrar
 el mensaje y su funcionamiento. Por último presentamos las conclusiones en la sección 7.
 
-#Para más detalles consultar el archivo "Book.pdf"
+# Para más detalles consultar el archivo "Book.pdf"
